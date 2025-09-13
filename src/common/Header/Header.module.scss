@@ -1,0 +1,30 @@
+
+@import '../../styles/variables';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include respond-between($breakpoint-xs, $breakpoint-lg-max) {
+    padding: 0 1.5rem;
+  }
+
+
+
+  ul {
+    transform: none;
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+
+    img {
+      width: 24px;
+      height: 16px;
+      display: block;
+    }
+  }
+}

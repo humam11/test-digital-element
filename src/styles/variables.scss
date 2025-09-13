@@ -1,0 +1,157 @@
+// Breakpoints
+$breakpoint-xs: 0px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+$breakpoint-xs-max: 575.98px;
+$breakpoint-sm-max: 767.98px;
+$breakpoint-md-max: 991.98px;
+$breakpoint-lg-max: 1199.98px;
+$breakpoint-xl-max: 1399.98px;
+
+// between breakpoints
+@mixin respond-between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@include respond-between($breakpoint-xs, $breakpoint-lg) {
+  .container {
+    align-self: center;
+    margin: 0 auto;
+    text-align: -webkit-center;
+  }
+
+  section.hero {
+    padding: 50px 0 !important;
+  }
+
+  section.services {
+    margin: 50px 0 !important;
+  }
+  footer {
+    border-top-left-radius: 0;
+  }
+}
+
+@include respond-between($breakpoint-xs, $breakpoint-sm) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.container {
+  max-width: 940px;
+}
+
+@include respond-between($breakpoint-xs, $breakpoint-xs-max) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+// base colors
+$color-blue-1: #316099;
+$color-blue-2: #5a98d0;
+$color-blue-light: #e8f4fd; // Light blue for top section
+$color-navy: #1f3f68;
+
+// color roles
+$color-bg-primary: $color-blue-1;
+$color-bg-secondary: $color-blue-2;
+$color-bg-light: $color-blue-light;
+$color-bg-dark: $color-navy;
+
+$color-text-on-dark-muted: rgba(#fff, 0.6);
+
+// typography
+$font-size-title: 36px;
+$font-size-heading: 20px;
+$font-size-body: 16px;
+$font-size-small: 14px;
+
+// border radius
+$normal-radius: 10px;
+
+// line height
+$line-height-title: 76px;
+$line-height-heading: 46px;
+$line-height-normal: 30px;
+
+// opacity
+$opacity-muted: 0.6;
+
+// shadows
+$shadow: 0px 20px 50px rgba(16, 112, 177, 0.2);
+
+.btn {
+  background-color: #5a98d0;
+  cursor: pointer;
+  width: 220px;
+  height: 56px;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  place-content: center;
+  font-size: 16px;
+  border-radius: $normal-radius;
+  letter-spacing: 0.5px;
+  border: none;
+  color: white;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-bg-primary;
+  }
+}
+
+:root {
+  font-family: "Gilroy", sans-serif;
+
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  p {
+    line-height: $line-height-normal;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+a.logo {
+  display: inline-block;
+  width: auto;
+  height: auto;
+
+  img {
+    width: 48px;
+    height: 48px;
+    display: block;
+  }
+}
