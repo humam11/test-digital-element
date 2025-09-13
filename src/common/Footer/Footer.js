@@ -1,5 +1,8 @@
 import "./Footer.scss";
 
+/**
+ *
+ */
 export function createFooter(isDetailed = true) {
   const footer = document.createElement("footer");
 
@@ -144,7 +147,11 @@ export function createFooter(isDetailed = true) {
   return footer;
 }
 
+/**
+ *
+ */
 export class Footer {
+
   constructor(bodyElement, isDetailed = true) {
     this.bodyElement = bodyElement;
     this.footerElement = null;
@@ -163,6 +170,7 @@ export class Footer {
 
     return this.footerElement;
   }
+
 }
 
 

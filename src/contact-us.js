@@ -4,7 +4,7 @@ import { Footer } from "./common/Footer/Footer.js";
 import { createHeader } from "./common/Header/Header.js";
 import { ContactForm } from "./components/ContactForm/ContactForm.js";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const header = createHeader("contact");
   document.body.insertAdjacentElement("afterbegin", header);
 

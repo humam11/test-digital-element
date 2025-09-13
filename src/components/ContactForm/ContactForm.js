@@ -1,6 +1,10 @@
 import "./ContactForm.scss";
 
+/**
+ *
+ */
 export class ContactForm {
+
   constructor(container = null, mode = "page") {
     this.container = container;
     this.mode = mode;
@@ -85,7 +89,9 @@ export class ContactForm {
 
     // удаляем старую форму
     const oldForm = grid.querySelector("#contact-form");
-    if (oldForm) oldForm.remove();
+    if (oldForm) {
+      oldForm.remove(); 
+    }
 
     grid.appendChild(formElement);
     this.formElement = formElement;
@@ -119,7 +125,9 @@ export class ContactForm {
   }
 
   openModal() {
-    if (this.isOpen) return;
+    if (this.isOpen) {
+      return; 
+    }
 
     this.modalElement = document.createElement("div");
     this.modalElement.innerHTML = this.createModalHTML();
@@ -134,7 +142,9 @@ export class ContactForm {
   }
 
   closeModal() {
-    if (!this.isOpen) return;
+    if (!this.isOpen) {
+      return; 
+    }
 
     if (this.modalElement) {
       document.body.removeChild(this.modalElement);
@@ -161,7 +171,9 @@ export class ContactForm {
   }
 
   attachModalEventListeners() {
-    if (this.mode !== "modal" || !this.isOpen) return;
+    if (this.mode !== "modal" || !this.isOpen) {
+      return; 
+    }
 
     const closeBtn = this.modalElement.querySelector("#modal-close");
     const overlay = this.modalElement.querySelector("#modal-overlay");
@@ -189,14 +201,18 @@ export class ContactForm {
   }
 
   getForm() {
-    if (!this.formElement) return null;
+    if (!this.formElement) {
+      return null; 
+    }
     return this.formElement.querySelector("#contact-form") || this.formElement;
   }
 
   getFormData() {
     const container =
       this.mode === "modal" ? this.modalElement : this.formElement;
-    if (!container) return null;
+    if (!container) {
+      return null; 
+    }
 
     return {
       fullName: container.querySelector("#fullName")?.value?.trim() || "",
@@ -283,7 +299,9 @@ export class ContactForm {
   displayFieldError(fieldName, error) {
     const container =
       this.mode === "modal" ? this.modalElement : this.formElement;
-    if (!container) return;
+    if (!container) {
+      return; 
+    }
 
     const errorElement = container.querySelector(`#${fieldName}-error`);
     if (errorElement) {
@@ -295,7 +313,9 @@ export class ContactForm {
     const fieldName = field.name;
     const container =
       this.mode === "modal" ? this.modalElement : this.formElement;
-    if (!container) return;
+    if (!container) {
+      return; 
+    }
 
     const errorElement = container.querySelector(`#${fieldName}-error`);
     if (errorElement) {
@@ -306,7 +326,9 @@ export class ContactForm {
   displayErrors(errors) {
     const container =
       this.mode === "modal" ? this.modalElement : this.formElement;
-    if (!container) return;
+    if (!container) {
+      return; 
+    }
 
     container.querySelectorAll(".error-message").forEach((el) => {
       el.textContent = "";
@@ -323,7 +345,9 @@ export class ContactForm {
   clearAllFields() {
     const container =
       this.mode === "modal" ? this.modalElement : this.formElement;
-    if (!container) return;
+    if (!container) {
+      return; 
+    }
 
     // очищаем все поля
     const inputs = container.querySelectorAll("input, textarea");
@@ -341,7 +365,9 @@ export class ContactForm {
     e.preventDefault();
 
     const formData = this.getFormData();
-    if (!formData) return;
+    if (!formData) {
+      return; 
+    }
 
     // валидация формы
     const errors = this.validateForm(formData);
@@ -354,12 +380,7 @@ export class ContactForm {
     this.displayErrors({});
 
     try {
-      // instead of axios.post → just console.log
-      console.log("Simulated POST to /api/contact");
-      console.log("Data:", formData);
-      console.log("Headers:", { "Content-Type": "application/json" });
-
-      console.log("форма отправлена успешно (симуляция)");
+      console.log("data:", formData);
 
       // очищаем все поля после "успешной отправки"
       this.clearAllFields();
@@ -377,4 +398,5 @@ export class ContactForm {
       }
     }
   }
+
 }

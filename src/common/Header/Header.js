@@ -1,9 +1,12 @@
 import "./Header.module.scss";
 
-export function createHeader(currentPage = 'index') {
+/**
+ *
+ */
+export function createHeader(currentPage = "index") {
   const header = document.createElement("header");
   
-  const logoLink = currentPage === 'contact' ? 'index.html' : '#';
+  const logoLink = currentPage === "contact" ? "index.html" : "#";
   
   header.innerHTML = `
     <a href="#" class="logo">
@@ -21,8 +24,12 @@ export function createHeader(currentPage = 'index') {
   return header;
 }
 
+/**
+ *
+ */
 export class Header {
-  constructor(bodyElement, currentPage = 'index') {
+
+  constructor(bodyElement, currentPage = "index") {
     this.bodyElement = bodyElement;
     this.headerElement = null;
     this.currentPage = currentPage;
@@ -33,4 +40,5 @@ export class Header {
     this.bodyElement.insertAdjacentElement("afterbegin", this.headerElement);
     return this.headerElement;
   }
+
 }

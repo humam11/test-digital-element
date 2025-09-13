@@ -3,16 +3,16 @@ import { Footer } from "./common/Footer/Footer.js";
 import { createHeader } from "./common/Header/Header.js";
 import { ContactForm } from "./components/ContactForm/ContactForm.js";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Add header to the page using the new reusable function
-  const header = createHeader('index');
+  const header = createHeader("index");
   document.body.insertAdjacentElement("afterbegin", header);
 
   // Create main element if it doesn't exist
-  let mainElement = document.querySelector('main');
+  let mainElement = document.querySelector("main");
   if (!mainElement) {
-    mainElement = document.createElement('main');
-    mainElement.innerHTML = '<h1>Main Content</h1><p>This is the main content area.</p>';
+    mainElement = document.createElement("main");
+    mainElement.innerHTML = "<h1>Main Content</h1><p>This is the main content area.</p>";
     document.body.appendChild(mainElement);
   }
 
