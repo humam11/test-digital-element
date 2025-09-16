@@ -1,0 +1,131 @@
+/* Breakpoint values */
+/* between breakpoints mixin */
+@media (min-width: 0px) and (max-width: 991.98px) {
+  .container {
+    align-self: center;
+    margin: 0 auto;
+    text-align: -webkit-center;
+  }
+
+  section.hero {
+    padding: 50px 0 !important;
+  }
+
+  section.services {
+    margin: 50px 0 !important;
+  }
+  
+  footer {
+    border-top-left-radius: 0;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 575.98px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.container {
+  max-width: 940px;
+}
+
+@media (min-width: 0px) and (max-width: 575.98px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.btn {
+  background-color: #5a98d0;
+  cursor: pointer;
+  width: 220px;
+  height: 56px;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  place-content: center;
+  font-size: 16px;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  border: none;
+  color: white;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #316099;
+}
+
+:root {
+  font-family: "Gilroy", sans-serif;
+  background-color: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body p,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  margin: 0;
+}
+
+body p {
+  line-height: 30px;
+}
+
+body a {
+  text-decoration: none;
+}
+
+a.logo {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+a.logo img {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 0px) and (max-width: 1199.98px) {
+  header {
+    padding: 0 1.5rem;
+  }
+}
+
+header ul {
+  transform: none;
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+header ul img {
+  width: 24px;
+  height: 16px;
+  display: block;
+}
