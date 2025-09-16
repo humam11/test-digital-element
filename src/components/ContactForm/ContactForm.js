@@ -1,4 +1,4 @@
-import "./ContactForm.css";
+import "./ContactForm.scss";
 
 /**
  *
