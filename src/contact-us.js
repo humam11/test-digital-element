@@ -1,4 +1,4 @@
-import "../src/styles/contact-us.css";
+import "../src/styles/contact-us.scss";
 
 import { Footer } from "./common/Footer/Footer.js";
 import { createHeader } from "./common/Header/Header.js";
