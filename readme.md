@@ -22,7 +22,12 @@ npm run lint
 npm run lint:fix
 ```
 
-## После запуска проект будет доступен по следующим адресам (порт может отличаться!):
+## Публичные ссылки
+
+-   Главная страница: <https://humam11.github.io/test-digital-element/>
+-   Страница "Contact Us": <https://humam11.github.io/test-digital-element/contact-us.html>
+
+## Локальная разработка
 
 -   Главная страница: <http://localhost:5173>
 -   Страница "Contact Us": <http://localhost:5173/contact-us>
