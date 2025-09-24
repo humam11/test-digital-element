@@ -1,4 +1,6 @@
 
+import "./styles/main.scss";
+
 import { Footer } from "./common/Footer/Footer.js";
 import { createHeader } from "./common/Header/Header.js";
 import { ContactForm } from "./components/ContactForm/ContactForm.js";
