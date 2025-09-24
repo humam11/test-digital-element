@@ -104,7 +104,7 @@ export function createFooter(isDetailed = true) {
               <div class="company-info">
                 <div>
                   <a href="#" class="logo">
-                    <img src="/assets/logos/logo-dark.svg" alt="Afrianska Logo" />
+                    <img src="./assets/logos/logo-dark.svg" alt="Afrianska Logo" />
                     <span>Afrianska</span>
                   </a>
                 </div>
