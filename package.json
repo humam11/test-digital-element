@@ -10,13 +10,11 @@
     "preview": "vite preview",
     "lint": "eslint . --ext js,ts --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext js,ts --fix",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "echo 'Use GitHub Actions for deployment'"
   },
   "devDependencies": {
     "@delement/eslint-config-master": "^1.1.7",
     "autoprefixer": "^10.4.21",
-    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "postcss-nested": "^7.0.2",
     "sass": "^1.92.1",
