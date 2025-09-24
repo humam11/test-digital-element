@@ -1,1 +1,0 @@
-import{c as t,C as n,F as o}from"./ContactForm-Pb7I8gLG.js";document.addEventListener("DOMContentLoaded",()=>{const e=t("contact");document.body.insertAdjacentElement("afterbegin",e),document.querySelector("main")&&n.create().render(),new o(document.body,!1).render()});

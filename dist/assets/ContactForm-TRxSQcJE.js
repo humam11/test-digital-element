@@ -37,7 +37,7 @@
               <div class="company-info">
                 <div>
                   <a href="#" class="logo">
-                    <img src="/assets/logos/logo-dark.svg" alt="Afrianska Logo" />
+                    <img src="./assets/logos/logo-dark.svg" alt="Afrianska Logo" />
                     <span>Afrianska</span>
                   </a>
                 </div>
@@ -93,7 +93,7 @@
               <div class="company-info">
                 <div>
                   <a href="#" class="logo">
-                    <img src="/assets/logos/logo-dark.svg" alt="Afrianska Logo" />
+                    <img src="./assets/logos/logo-dark.svg" alt="Afrianska Logo" />
                     <span>Afrianska</span>
                   </a>
                 </div>
@@ -132,12 +132,12 @@
       </div>
     `,e}class d{constructor(e,s=!0){this.bodyElement=e,this.footerElement=null,this.isDetailed=s}render(){this.footerElement=n(this.isDetailed);const e=this.bodyElement.querySelector("main");return e?e.insertAdjacentElement("afterend",this.footerElement):this.bodyElement.appendChild(this.footerElement),this.footerElement}}function c(l="index"){const e=document.createElement("header");return e.innerHTML=`
     <a href="#" class="logo">
-      <img src="/assets/logos/logo-light.svg" alt="Afrianska Logo">
+      <img src="./assets/logos/logo-light.svg" alt="Afrianska Logo">
     </a>
     <nav>
       <ul>
         <li>
-          <img class="burger-icon" src="/assets/burger-list.svg" alt="Burger List Icon">
+          <img class="burger-icon" src="./assets/burger-list.svg" alt="Burger List Icon">
         </li>
       </ul>
     </nav>
